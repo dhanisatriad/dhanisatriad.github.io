@@ -1,18 +1,26 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import thumbnail1 from '../../assets/images/1.png'
 import thumbnail2 from '../../assets/images/2.png'
+import thumbnail3 from '../../assets/images/3.png'
 import './index.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faCircleChevronRight,
+  faCircleChevronLeft,
+} from '@fortawesome/free-solid-svg-icons'
 
 const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
   }, [])
+
   const cardData = [
     {
       id: 1,
@@ -28,19 +36,34 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: 'Card 2',
-      text: 'This is the second card. It also has some content.',
-      listItems: ['Item 1', 'Item 2', 'Item 3'],
+      title: 'Web Desa',
+      text: 'https://github.com/dhanisatriad/web-laboratorium',
+      listItems: [
+        'Manage Profil Desa',
+        'Login',
+        'Manage Kabar Desa',
+        'Manage Perangkat Desa',
+        'Galeri'
+      ],
       imageUrl: thumbnail2, // Update with your actual image path
     },
-    // {
-    //   id: 3,
-    //   title: 'Card 2',
-    //   text: 'This is the second card. It also has some content.',
-    //   listItems: ['Item 1', 'Item 2', 'Item 3'],
-    //   imageUrl: thumbnail2, // Update with your actual image path
-    // },
+    {
+      id: 3,
+      title: 'Learn REST API',
+      text: 'https://github.com/dhanisatriad/learn-rest-api',
+      listItems: ['CRUD'],
+      imageUrl: thumbnail3, // Update with your actual image path
+    },
   ]
+
+  const itemsPerPage = 2 // Set the number of items to display per page
+  const indexOfLastItem = currentPage * itemsPerPage
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage
+  const currentCardData = cardData.slice(indexOfFirstItem, indexOfLastItem)
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage)
+  }
 
   return (
     <div className="container portfolio-page">
@@ -52,31 +75,55 @@ const Portfolio = () => {
             idx={15}
           />
         </h1>
-        <div className="cardContainer">
-          {cardData.map((card) => (
-            <a href='/'>
-              <div className="card" key={card.id}>
-                <img
-                  className="card-img"
-                  src={card.imageUrl}
-                  alt={`Thumbnail ${card.id}`}
-                />
-                <div className="card-body">
-                  <h2 className="card-title">{card.title}</h2>
-                  <div className="card-text">
-                    {card.text}
-                    <ul>
-                      {card.listItems.map((item, index) => (
-                        <li key={index}>{item}</li>
-                      ))}
-                    </ul>
+
+        <div className="PaginationContainer">
+          <div className="pagination-controls">
+            <button
+              id="prev"
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              <FontAwesomeIcon icon={faCircleChevronLeft} />
+            </button>
+          </div>
+
+          <div className="CardContainer">
+            {currentCardData.map((card) => (
+              <a href={card.text} key={card.id} target="_blank">
+                <div className="card">
+                  <img
+                    className="card-img"
+                    src={card.imageUrl}
+                    alt={`Thumbnail ${card.id}`}
+                  />
+                  <div className="card-body">
+                    <h2 className="card-title">{card.title}</h2>
+                    <div className="card-text">
+                      {card.text}
+                      <ul>
+                        {card.listItems.map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
-          ))}
+              </a>
+            ))}
+          </div>
+
+          <div className="pagination-controls">
+            <button
+              id="next"
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={indexOfLastItem >= cardData.length}
+            >
+              <FontAwesomeIcon icon={faCircleChevronRight} />
+            </button>
+          </div>
         </div>
       </div>
+      <Loader type="ball-scale-multiple" />
     </div>
   )
 }

@@ -28,8 +28,8 @@ const ShootingStar = () => {
     });
   };
 
-  const numStars = 10;
-  const starSize = 1;
+  const numStars = 20;
+  const starSize = 3;
 
   return (
     <div className='starContainer'>
@@ -39,8 +39,8 @@ const ShootingStar = () => {
           ref={(el) => (starsRef.current[index] = el)}
           style={{
             position: 'absolute',
-            width: `${starSize}vmin`, // Adjust the size based on viewport dimensions
-            height: `${starSize}vmin`, // Adjust the size based on viewport dimensions
+            width: `${starSize}px`, // Adjust the size based on viewport dimensions
+            height: `${starSize}px`, // Adjust the size based on viewport dimensions
             background: 'white',
             borderRadius: '50%',
             top: `${Math.random() * 100}vh`,
