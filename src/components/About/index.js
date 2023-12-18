@@ -32,19 +32,23 @@ const About = () => {
               idx={15}
             />
           </h1>
+          <p id='nasi'>
+            Greetings! I'm Dhani Satria Dharma, an enthusiastic web developer
+            with a keen eye for crafting seamless digital experiences. My
+            expertise lies in Full-Stack development. Currently, I am well-versed
+            in Laravel for efficient back-end development, bringing robust and
+            scalable solutions to life. 
+          </p>
           <p>
-            I'm a very ambitious front-end developer looking for a role in an
-            established IT company with the opportunity to work with the latest
-            technologies on challenging and diverse projects.
+            Additionally, I am currently expanding my skill set by delving into
+            the world of front-end development. I'm actively learning React and
+            Vue.js, aiming to integrate these powerful frameworks into my
+            toolkit for creating interactive and dynamic user interfaces.
           </p>
           <p align="LEFT">
-            I'm quiet confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
-          </p>
-          <p>
-            If I need to define myself in one sentence that would be a family
-            person, father of a beautiful daughter, a sports fanatic,
-            photography enthusiast, and tech-obsessed!!!
+            I'm driven by the pursuit of delivering cutting-edge, user-centric
+            web applications. Let's turn ideas into reality and create
+            meaningful impact together in the dynamic world of web development!
           </p>
         </div>
 
@@ -75,6 +79,5 @@ const About = () => {
     </>
   )
 }
-
 
 export default About

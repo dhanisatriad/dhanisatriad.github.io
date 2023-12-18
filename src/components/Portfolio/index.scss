@@ -66,9 +66,9 @@
       li {
         margin-bottom: 5px;
         color: #fff;
-        &:hover{
+        &:hover {
           animation: headShake 0.4s;
-          color: #0ac87f; 
+          color: #0ac87f;
         }
         &:before {
           content: '•';
@@ -93,7 +93,7 @@
   flex-wrap: wrap;
 }
 
-.CardContainer{
+.CardContainer {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -101,33 +101,30 @@
   width: 80%;
 }
 
-
 // Your existing styles
 
 .pagination-controls {
   margin-top: 20px;
 }
 
-#prev{
+#prev {
   // opacity: 0;
   animation: bounceInLeft 2.5s 1s;
   animation-fill-mode: forwards;
 }
-#next{
+#next {
   // opacity: 0;
   animation: bounceInRight 2.5s 1s;
   animation-fill-mode: forwards;
 }
 
 button {
-  
   // padding: 15px; // Increase the padding for better spacing
   cursor: pointer;
   background-color: transparent;
   color: rgb(255, 250, 0, 0.7);
   border: none;
   font-size: 40px; // Increase the font-size for a larger icon
-  
 
   &:disabled {
     color: rgb(255, 250, 0, 0.7);
@@ -143,7 +140,3 @@ button {
     // animation: headShake 1s;
   }
 }
-
-
-
-
