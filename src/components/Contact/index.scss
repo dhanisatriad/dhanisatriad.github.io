@@ -34,7 +34,7 @@
   
     input[type='text'],
     input[type='email'] {
-      font-family: sans-serif;
+      font-family: 'Ubuntu';
       width: 100%;
       border: 0;
       background: rgba(0, 130, 80, 0.8);
@@ -48,7 +48,7 @@
   
     textarea {
       border-radius: 10px;
-      font-family: sans-serif;
+      font-family: 'Ubuntu';
       width: 100%;
       border: 0;
       background: rgba(0, 130, 80, 0.8);
@@ -63,7 +63,7 @@
     .flat-button {
       color: #0ac87f;
       font-size: 11px;
-      font-family: sans-serif;
+      font-family: 'Ubuntu';
       letter-spacing: 3px;
       text-decoration: none;
       padding: 8px 10px;
@@ -105,7 +105,7 @@
     width: 267px;
     padding: 20px;
     color: #fff;
-    font-family: 'Coolvetica';
+    font-family: 'Ubuntu';
     font-size: 17px;
     font-weight: 300;
     opacity: 0;
