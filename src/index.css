@@ -1,9 +1,12 @@
 
 html{
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
+  min-height: 1200px;
+  min-width: 550px;
   margin: 0;
   font:300 11px/1.4 'Helvetica Neue', sans-serif;
   color: #444;
@@ -21,7 +24,7 @@ body {
 
 @media screen and (max-width: 1200px) {
   body {
-    overflow: visible;
+    overflow: auto;
   }
 }
 

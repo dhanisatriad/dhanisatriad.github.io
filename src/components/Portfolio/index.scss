@@ -72,6 +72,8 @@
   color: white;
   display: flex;
   flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .card > .row > .icon {
@@ -202,5 +204,38 @@ input:checked + label {
   }
   input:checked + label {
     width: 600px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .containerb {
+    height: 600px;
+  }
+  .card {
+    width: 50px;
+  }
+
+  .card > .row > .icon { 
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    font-family: 'Ubuntu';
+    font-size: medium;
+    font-weight: 300;
+  }
+
+  .card > .row > .description {
+    height: 250px;
+  }
+
+  .sec1{
+    width: 35%;
+  }
+  .sec2{
+    margin-left: 5px;
+    height: 240px;
+  }
+  input:checked + label {
+    width: 400px;
   }
 }
