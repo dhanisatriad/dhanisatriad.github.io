@@ -109,17 +109,16 @@ const Portfolio = () => {
                       <div className="icon">{card.id}</div>
                       <div className="description">
                         <div className="sec1">
-                          <h4>{card.title}</h4>
                           <a href={card.text} target="blank" rel="noreferrer">
-                            <p>{card.text}</p>
+                          <h4>{card.title}</h4>
                           </a>
                         </div>
                         <div className="sec2">
-                          <ul>
+                          {/* <ul> */}
                             {card.listItems.map((item, itemIndex) => (
-                              <li key={itemIndex}>{item}</li>
+                              <h5 key={itemIndex}>{item}</h5>
                             ))}
-                          </ul>
+                          {/* </ul> */}
                         </div>
                       </div>
                     </div>

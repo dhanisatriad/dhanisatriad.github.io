@@ -100,46 +100,43 @@
 
 .card > .row > .description {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   overflow: hidden;
-  height: 100px;
+  height: 110px;
   width: 100%;
   opacity: 0;
   z-index: 1;
   margin-left: 10px;
 }
 
-.sec1 {
-  width: 40%;
-}
-
 .sec2 {
-  height: 90px;
-  display: flex;
-  gap: 5px;
+  height: 100%;
   padding: 5px;
-  flex-grow: 2;
-  margin-left: 30px;
-  ul {
-    display: flex;
-    flex-direction: column;
-    overflow-wrap: break-word;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
+  display: flex;
+  flex-direction: row;
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  // ul {
+  //   display: flex;
+  //   flex-direction: column;
+  //   overflow-wrap: break-word;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  //   padding: 0;
+  //   margin: 0;
+  //   list-style: none;
+  // }
 
-  ul li {
-    font-size: 14px;
+  h5 {
+    margin: 0;
+    padding: 0;
     word-break: break-word; /* Break words when needed */
-    margin-right: 20px; /* Adjust spacing between list items as needed */
-    color: #ddd;
+    margin-right: 20px;
     &:hover {
       animation: headShake 0.4s;
       color: #0ac87f;
@@ -154,17 +151,14 @@
 
 .description a {
   pointer-events: none;
-  & p {
+  & h4 {
+    font-family: 'Ubuntu';
     color: #0ac87f !important;
     text-decoration: none !important;
+    text-transform: uppercase;
+    font-size: 1.5rem;
     margin: 5px;
   }
-}
-
-.description h4 {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  margin: 5px;
 }
 
 .containerb > input {
@@ -172,13 +166,13 @@
 }
 
 input:checked + label {
-  width: 800px;
+  width: 55vw;
   cursor: default;
   & .card-img {
     animation: fadeIn 1s 0.5s;
-    animation-fill-mode:both;
-    opacity: 1 ;
-    display: flex ;
+    animation-fill-mode: both;
+    opacity: 1;
+    display: flex;
   }
 
   & .description {
@@ -186,7 +180,7 @@ input:checked + label {
       pointer-events: auto;
     }
     animation: fadeIn 1s 0.5s;
-    animation-fill-mode:both;
+    animation-fill-mode: both;
     // opacity: 1!important;
     // transform: translateX(10px) !important;
   }
@@ -196,44 +190,47 @@ input:checked + label {
 }
 
 @media screen and (max-width: 1200px) {
-  .sec1{
-    width: 35%;
+  .containerb {
+    height: 50vh;
   }
-  .sec2{
+
+  .sec2 {
     margin-left: 5px;
   }
   input:checked + label {
-    width: 600px;
+    width: 50vw;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .containerb {
-    height: 600px;
+    height: 300px;
   }
   .card {
     width: 50px;
+  margin: 0 5px;
   }
 
-  .card > .row > .icon { 
+  .card > .row > .icon {
     width: 30px;
     height: 30px;
     margin: auto;
     font-family: 'Ubuntu';
     font-size: medium;
-    font-weight: 300;
+    font-weight: 3006;
+  }
+
+  .card-img {
+    height: 100%;
   }
 
   .card > .row > .description {
-    height: 250px;
+    height: min-content;
   }
 
-  .sec1{
-    width: 35%;
-  }
-  .sec2{
-    margin-left: 5px;
-    height: 240px;
+  .sec2 {
+    margin-bottom: 5px;
+    height: min-content;
   }
   input:checked + label {
     width: 400px;
