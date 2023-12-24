@@ -236,3 +236,22 @@ input:checked + label {
     width: 400px;
   }
 }
+@media screen and (max-width: 600px) {
+  .containerb {
+    height: 380px;
+  }
+  .card  {
+    width: 30px;
+  }
+  input:checked + label {
+    width: 240px;
+  }
+  .sec2{
+    align-items: center;
+    justify-content: center;
+
+    h5{
+      width: max-content;
+    }
+  }
+}

@@ -102,3 +102,16 @@
     float: right;
   }
 }
+@media screen and (max-width: 800px) {
+
+
+  .about-page {
+      .text-zone {
+        width: 100%;
+      }
+    }
+  
+  .stage-cube-cont {
+   display: none;
+  }
+}
