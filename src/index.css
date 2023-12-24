@@ -5,7 +5,7 @@ html{
 }
 
 body {
-  min-height: 600px;
+  /* min-height: 600px; */
   min-width: 650px;
   margin: 0;
   font:300 11px/1.4 'Helvetica Neue', sans-serif;
