@@ -237,6 +237,9 @@ input:checked + label {
   }
 }
 @media screen and (max-width: 600px) {
+  .container.portfolio-page {
+    overflow-x: scroll;
+  }
   .containerb {
     height: 380px;
   }
