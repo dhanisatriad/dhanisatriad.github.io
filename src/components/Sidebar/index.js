@@ -15,7 +15,7 @@ import { useState } from 'react'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => {
-  const [showNav, setShowNav] = useState(false);
+  const [showNav, setShowNav] = useState(false)
 
   return (
     <div className="nav-bar">
@@ -24,7 +24,12 @@ const Sidebar = () => {
         <img className="sub-logo" src={Logosub} alt="logo-sub" />
       </Link>
       <nav className={showNav ? 'mobile-show' : ''}>
-        <NavLink excact="true" activeclassname="active" to="/">
+        <NavLink
+          excact="true"
+          activeclassname="active"
+          to="/"
+          onClick={() => setShowNav(false)}
+        >
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </NavLink>
 
@@ -54,12 +59,13 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>
-        <FontAwesomeIcon 
+        <FontAwesomeIcon
           onClick={() => setShowNav(false)}
           icon={faClose}
           color="#ffd700"
           size="3x"
-          className='close-icon' />
+          className="close-icon"
+        />
       </nav>
       <ul>
         <li>

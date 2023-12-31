@@ -65,7 +65,6 @@
   width: 100%;
   will-change: contents;
   height: 90%;
-  min-width: 566;
   position: absolute;
   opacity: 0;
   top: 5%;
@@ -115,7 +114,7 @@
     }
   }
 
-  h5{
+  h5 {
     font-size: 16px;
     color: #fff;
     font-family: 'Ubuntu';
@@ -159,6 +158,12 @@
   }
 }
 
+.container.about-page {
+  .text-zone {
+    width: 50%;
+  }
+}
+
 .container.portfolio-page {
   .text-zone {
     transform: none;
@@ -172,19 +177,24 @@
   .page {
     position: initial;
   }
-  
-  .background{
+
+  .background {
     overflow: hidden;
   }
 
   .tags {
     left: 20px;
+    margin-top: 15px;
+  }
+
+  .top-tags {
+    top: 0px;
   }
 
   .container {
     position: absolute;
-    height: auto;
-    min-height: auto;
+    height: 100%;
+    min-height: 90%;
 
     &.contact-page,
     &.about-page,
@@ -194,10 +204,20 @@
         transform: none;
         width: auto;
         display: block;
-        margin-top: 100px;
+        margin-top: 50px;
         margin-left: 30px;
         padding: 20px;
         box-sizing: border-box;
+      }
+      h1 {
+        font-size: 3.5vw;
+        font-weight: 300;
+        margin-bottom: 5px;
+      }
+      p {
+        padding-top: 10px;
+        font-size: 130%;
+        font-weight: 400;
       }
     }
 
@@ -214,6 +234,22 @@
       .image-box {
         height: 200px;
         max-width: calc(50% - 10px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    &.contact-page,
+    &.about-page,
+    &.portfolio-page{
+      h1{
+        font-size: 30px;
+      }
+      p {
+        padding-top: 10px;
+        font-size: 2.2vh;
       }
     }
   }

@@ -131,20 +131,34 @@
 
 @media screen and (max-width: 1200px) {
   .nav-bar {
-
-    background-color: #181818;
-  height: 80px;
+  background-color: #181818;
+  height: min-content;
   width: 100%;
   position: initial;
   top: 0;
-  z-index: 3;
   min-height: 60px;
+  display: flex;
 
     // background: transparent;
     // position: initial;
     // height: auto;
     // min-height: auto;
-
+    .logo {
+      display: block;
+      padding: 8px 0;
+      width: fit-content;
+      margin: auto;
+  
+      img {
+        display: block;
+        margin: 8px auto;
+        width: 24px;
+        height: auto;
+        &.sub-logo {
+        display: none;
+        }
+      }
+    }
     ul,
     nav {
       display: none;
@@ -182,12 +196,19 @@
       }
     }
 
-    .hamburger-icon,
+    .hamburger-icon{
+      position: absolute;
+      right: 15px;
+      display: flex;
+      align-self: center;
+    }
     .close-icon {
       position: absolute;
-      top: 15px;
       right: 15px;
-      display: block;
+      top: 15px;
+      display: flex;
     }
   }
 }
+
+
