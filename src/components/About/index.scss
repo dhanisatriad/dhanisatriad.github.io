@@ -95,4 +95,11 @@
     display: none;
   }
 }
+@media screen and (max-width: 600px) {
+.container.about-page{
+  h1{
+    left: 0%;
+  }
+}
+}
 

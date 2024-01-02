@@ -204,8 +204,7 @@
         transform: none;
         width: auto;
         display: block;
-        margin-top: 50px;
-        margin-left: 30px;
+        margin-top: 7vh;
         padding: 20px;
         box-sizing: border-box;
       }
@@ -240,16 +239,39 @@
 }
 
 @media screen and (max-width: 600px) {
+  .tags{
+    display: none;
+  }
   .container {
     &.contact-page,
     &.about-page,
     &.portfolio-page{
+      .text-zone{
+        margin-top: 0;
+      }
       h1{
         font-size: 30px;
       }
       p {
         padding-top: 10px;
         font-size: 2.2vh;
+      }
+    }
+  }
+}
+@media screen and (max-height: 600px) {
+  .tags{
+    display: none;
+  }
+  .container {
+    &.contact-page,
+    &.about-page,
+    &.portfolio-page{
+      .text-zone{
+        margin-top: 0;
+      }
+      h1{
+        margin-bottom: 20px;
       }
     }
   }
